@@ -14,15 +14,15 @@ const port = 3000;
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
+  res.sendFile("/public/index.html");
 });
 app.post("/check",(req,res)=>{
     console.log(req.body);
     if(req.body["password"] == "ILove"){
-        res.sendFile(__dirname+"/public/secret.html");
+        res.sendFile("/public/secret.html");
     }
     else{
-            res.sendFile(__dirname + "/public/index.html");
+            res.sendFile("/public/index.html");
     }
 })
 
